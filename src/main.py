@@ -23,7 +23,8 @@ logging.basicConfig(
 def main():
     with mlflow.start_run() as run:
         mlflow.run(".", "get_data", use_conda=False)
-        mlflow.run(".", "base_model_creation", use_conda=False)    
+        mlflow.run(".", "base_model_creation", use_conda=False)
+        mlflow.run(".", "training", use_conda=False)    
     
 
 
