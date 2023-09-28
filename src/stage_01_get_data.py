@@ -38,8 +38,14 @@ def main(config_path):
         logging.info(f"filename:{data_file} already present")
 
     unzip_data_dir = config["data"]["unzip_data_dir"]
-    create_directories([unzip_data_dir])
-    unzip_file(source=data_file_path, dest=unzip_data_dir)
+    if not os.path.exists(unzip_data_dir):
+        create_directories([unzip_data_dir])
+        unzip_file(source=data_file_path, dest=unzip_data_dir)
+    else:
+        logging.info(f"data already extracted")
+         
+    
+    
 
     # Validating data
     validate_image(config)
