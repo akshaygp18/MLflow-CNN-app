@@ -10,7 +10,7 @@ data:
   model_dir: model
   init_model_file: init_model.h5  
   trained_model_file: trained_model.h5
-
+  class_labels: ["cat", "dog"]
 
 params:
   img_shape: [180,180,3]
@@ -21,4 +21,4 @@ params:
   seed: 42
   batch_size: 32
   buffer_size: 32
-  epochs: 1
+  epochs: 01
