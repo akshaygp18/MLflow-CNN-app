@@ -20,3 +20,9 @@ entry_points:
     parameters:
       config: {type: str, default: "configs/config.yaml"}
     command: "python src/stage_04_train.py --config={config}"
+
+  prediction:
+    parameters:
+      config: {type: str, default: "configs/config.yaml"}
+    command: "python src/stage_05_prediction.py --config={config} --image data/PetImages/Dog/3.jpg"
+
